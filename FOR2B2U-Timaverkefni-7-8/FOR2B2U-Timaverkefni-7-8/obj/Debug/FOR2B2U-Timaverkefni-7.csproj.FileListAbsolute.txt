@@ -1,0 +1,13 @@
+\\skra2.2t.local\nemfredirect$\2808982529\documents\visual studio 2013\Projects\FOR2B2U-Timaverkefni-7-8\FOR2B2U-Timaverkefni-7-8\bin\Debug\FOR2B2U-Timaverkefni-7-8.exe.config
+\\skra2.2t.local\nemfredirect$\2808982529\documents\visual studio 2013\Projects\FOR2B2U-Timaverkefni-7-8\FOR2B2U-Timaverkefni-7-8\bin\Debug\FOR2B2U-Timaverkefni-7-8.exe
+\\skra2.2t.local\nemfredirect$\2808982529\documents\visual studio 2013\Projects\FOR2B2U-Timaverkefni-7-8\FOR2B2U-Timaverkefni-7-8\bin\Debug\FOR2B2U-Timaverkefni-7-8.pdb
+\\skra2.2t.local\nemfredirect$\2808982529\documents\visual studio 2013\Projects\FOR2B2U-Timaverkefni-7-8\FOR2B2U-Timaverkefni-7-8\bin\Debug\MySql.Data.dll
+\\skra2.2t.local\nemfredirect$\2808982529\documents\visual studio 2013\Projects\FOR2B2U-Timaverkefni-7-8\FOR2B2U-Timaverkefni-7-8\obj\Debug\FOR2B2U-Timaverkefni-7.csprojResolveAssemblyReference.cache
+\\skra2.2t.local\nemfredirect$\2808982529\documents\visual studio 2013\Projects\FOR2B2U-Timaverkefni-7-8\FOR2B2U-Timaverkefni-7-8\obj\Debug\FOR2B2U_Timaverkefni_7_8.SQL_Grunnur.resources
+\\skra2.2t.local\nemfredirect$\2808982529\documents\visual studio 2013\Projects\FOR2B2U-Timaverkefni-7-8\FOR2B2U-Timaverkefni-7-8\obj\Debug\FOR2B2U_Timaverkefni_7_8.Properties.Resources.resources
+\\skra2.2t.local\nemfredirect$\2808982529\documents\visual studio 2013\Projects\FOR2B2U-Timaverkefni-7-8\FOR2B2U-Timaverkefni-7-8\obj\Debug\FOR2B2U-Timaverkefni-7.csproj.GenerateResource.Cache
+\\skra2.2t.local\nemfredirect$\2808982529\documents\visual studio 2013\Projects\FOR2B2U-Timaverkefni-7-8\FOR2B2U-Timaverkefni-7-8\obj\Debug\FOR2B2U-Timaverkefni-7-8.exe
+\\skra2.2t.local\nemfredirect$\2808982529\documents\visual studio 2013\Projects\FOR2B2U-Timaverkefni-7-8\FOR2B2U-Timaverkefni-7-8\obj\Debug\FOR2B2U-Timaverkefni-7-8.pdb
+C:\Users\Notandi\Desktop\FOR2B2U-Timaverkefni-7-8\FOR2B2U-Timaverkefni-7-8\bin\Debug\FOR2B2U-Timaverkefni-7-8.exe.config
+C:\Users\Notandi\Desktop\FOR2B2U-Timaverkefni-7-8\FOR2B2U-Timaverkefni-7-8\obj\Debug\FOR2B2U-Timaverkefni-7-8.exe
+C:\Users\Notandi\Desktop\FOR2B2U-Timaverkefni-7-8\FOR2B2U-Timaverkefni-7-8\obj\Debug\FOR2B2U-Timaverkefni-7-8.pdb

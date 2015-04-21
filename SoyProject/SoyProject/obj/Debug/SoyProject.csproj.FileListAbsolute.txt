@@ -1,0 +1,10 @@
+c:\users\notandi\documents\visual studio 2013\Projects\SoyProject\SoyProject\bin\Debug\SoyProject.exe.config
+c:\users\notandi\documents\visual studio 2013\Projects\SoyProject\SoyProject\obj\Debug\SoyProject.csprojResolveAssemblyReference.cache
+c:\users\notandi\documents\visual studio 2013\Projects\SoyProject\SoyProject\obj\Debug\SoyProject.SoyForm.resources
+c:\users\notandi\documents\visual studio 2013\Projects\SoyProject\SoyProject\obj\Debug\SoyProject.Properties.Resources.resources
+c:\users\notandi\documents\visual studio 2013\Projects\SoyProject\SoyProject\obj\Debug\SoyProject.csproj.GenerateResource.Cache
+c:\users\notandi\documents\visual studio 2013\Projects\SoyProject\SoyProject\bin\Debug\SoyProject.exe
+c:\users\notandi\documents\visual studio 2013\Projects\SoyProject\SoyProject\bin\Debug\SoyProject.pdb
+c:\users\notandi\documents\visual studio 2013\Projects\SoyProject\SoyProject\obj\Debug\SoyProject.exe
+c:\users\notandi\documents\visual studio 2013\Projects\SoyProject\SoyProject\obj\Debug\SoyProject.pdb
+c:\users\notandi\documents\visual studio 2013\Projects\SoyProject\SoyProject\bin\Debug\MySql.Data.dll
