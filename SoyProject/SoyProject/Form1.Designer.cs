@@ -38,50 +38,57 @@
             // 
             this.CB_Employees.Font = new System.Drawing.Font("Microsoft JhengHei Light", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CB_Employees.FormattingEnabled = true;
-            this.CB_Employees.Location = new System.Drawing.Point(161, 68);
+            this.CB_Employees.Location = new System.Drawing.Point(107, 44);
+            this.CB_Employees.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CB_Employees.Name = "CB_Employees";
-            this.CB_Employees.Size = new System.Drawing.Size(412, 58);
+            this.CB_Employees.Size = new System.Drawing.Size(276, 42);
             this.CB_Employees.TabIndex = 0;
             // 
             // TxtBox_Quantity
             // 
             this.TxtBox_Quantity.Font = new System.Drawing.Font("Microsoft JhengHei Light", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtBox_Quantity.Location = new System.Drawing.Point(378, 166);
+            this.TxtBox_Quantity.Location = new System.Drawing.Point(258, 108);
+            this.TxtBox_Quantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtBox_Quantity.Name = "TxtBox_Quantity";
-            this.TxtBox_Quantity.Size = new System.Drawing.Size(195, 61);
+            this.TxtBox_Quantity.Size = new System.Drawing.Size(125, 43);
             this.TxtBox_Quantity.TabIndex = 1;
+            this.TxtBox_Quantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Lbl_Quantity
             // 
             this.Lbl_Quantity.AutoSize = true;
-            this.Lbl_Quantity.Font = new System.Drawing.Font("Microsoft JhengHei Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Quantity.Location = new System.Drawing.Point(154, 179);
+            this.Lbl_Quantity.Font = new System.Drawing.Font("Microsoft JhengHei Light", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Quantity.Location = new System.Drawing.Point(103, 116);
+            this.Lbl_Quantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Lbl_Quantity.Name = "Lbl_Quantity";
-            this.Lbl_Quantity.Size = new System.Drawing.Size(173, 38);
+            this.Lbl_Quantity.Size = new System.Drawing.Size(151, 30);
             this.Lbl_Quantity.TabIndex = 2;
-            this.Lbl_Quantity.Text = "Fjöldi flaska";
+            this.Lbl_Quantity.Text = "Fjöldi flaskna";
             // 
             // Btn_SendData
             // 
             this.Btn_SendData.Font = new System.Drawing.Font("Microsoft JhengHei Light", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_SendData.Location = new System.Drawing.Point(161, 281);
+            this.Btn_SendData.Location = new System.Drawing.Point(107, 183);
+            this.Btn_SendData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Btn_SendData.Name = "Btn_SendData";
-            this.Btn_SendData.Size = new System.Drawing.Size(412, 73);
+            this.Btn_SendData.Size = new System.Drawing.Size(275, 47);
             this.Btn_SendData.TabIndex = 3;
             this.Btn_SendData.Text = "Senda inn gögn";
             this.Btn_SendData.UseVisualStyleBackColor = true;
             // 
             // SoyForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(748, 516);
+            this.ClientSize = new System.Drawing.Size(499, 335);
             this.Controls.Add(this.Btn_SendData);
             this.Controls.Add(this.Lbl_Quantity);
             this.Controls.Add(this.TxtBox_Quantity);
             this.Controls.Add(this.CB_Employees);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "SoyForm";
             this.Text = "Soy";
+            this.Load += new System.EventHandler(this.SoyForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -8,3 +8,13 @@ c:\users\notandi\documents\visual studio 2013\Projects\SoyProject\SoyProject\bin
 c:\users\notandi\documents\visual studio 2013\Projects\SoyProject\SoyProject\obj\Debug\SoyProject.exe
 c:\users\notandi\documents\visual studio 2013\Projects\SoyProject\SoyProject\obj\Debug\SoyProject.pdb
 c:\users\notandi\documents\visual studio 2013\Projects\SoyProject\SoyProject\bin\Debug\MySql.Data.dll
+C:\Users\Neal\Documents\GitHub\Soy_project\SoyProject\SoyProject\bin\Debug\SoyProject.exe.config
+C:\Users\Neal\Documents\GitHub\Soy_project\SoyProject\SoyProject\obj\Debug\SoyProject.exe
+C:\Users\Neal\Documents\GitHub\Soy_project\SoyProject\SoyProject\obj\Debug\SoyProject.pdb
+C:\Users\Neal\Documents\GitHub\Soy_project\SoyProject\SoyProject\bin\Debug\SoyProject.exe
+C:\Users\Neal\Documents\GitHub\Soy_project\SoyProject\SoyProject\bin\Debug\SoyProject.pdb
+C:\Users\Neal\Documents\GitHub\Soy_project\SoyProject\SoyProject\bin\Debug\MySql.Data.dll
+C:\Users\Neal\Documents\GitHub\Soy_project\SoyProject\SoyProject\obj\Debug\SoyProject.csprojResolveAssemblyReference.cache
+C:\Users\Neal\Documents\GitHub\Soy_project\SoyProject\SoyProject\obj\Debug\SoyProject.SoyForm.resources
+C:\Users\Neal\Documents\GitHub\Soy_project\SoyProject\SoyProject\obj\Debug\SoyProject.Properties.Resources.resources
+C:\Users\Neal\Documents\GitHub\Soy_project\SoyProject\SoyProject\obj\Debug\SoyProject.csproj.GenerateResource.Cache

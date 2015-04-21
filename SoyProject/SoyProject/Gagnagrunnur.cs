@@ -37,11 +37,11 @@ namespace SoyProject
         // This method connects the user to the database
         public void ConnectionToDatabase()
         {
-            server = "mysql.hostinger.co.uk";
-            database = "u456281673_soy";
-            UID = "u456281673_maxim";
-            password = "Maxim#cool";
-
+            server = "tsuts.tskoli.is";
+            database = "2808982529_cs_soy";
+            UID = "2808982529";
+            password = "mypassword";
+            
             tengistrengur = "server=" + server + ";userid=" + UID + ";password=" + password + ";database=" + database;
             SQL_Connection = new MySqlConnection(tengistrengur);
         }
@@ -50,6 +50,9 @@ namespace SoyProject
         // This method checks whether connection was successful or not
         private bool OpenConnection()
         {
+            if (SQL_Connection.State == System.Data.ConnectionState.Open)
+                return true;
+
             try
             {
                 SQL_Connection.Open();
@@ -75,39 +78,34 @@ namespace SoyProject
             }
         }
 
-
-        // This method reads from the MySQL Database all records and displays in the respective table
-        public List<string> ReadFromDatabase()
+        public List<string> RetrieveEmployeeNames()
         {
-            List<string> records = new List<string>();
-            string line = null;
+            // List of employees. Will later be filled with data from database.
+            List<string> employees = new List<string>();
 
             if (OpenConnection())
             {
-                query = "SELECT ID, nafn, netfang, simanumer FROM medlimir";
-                SQL_Command = new MySqlCommand(query, SQL_Connection);
+                query = "SELECT name FROM employee";
 
-                // ExecuteReader: Used to execute a command that will return 0 or more records.
+                SQL_Command = new MySqlCommand(query, SQL_Connection);
                 SQL_Reader = SQL_Command.ExecuteReader();
 
                 while (SQL_Reader.Read())
                 {
-                    for (int i = 0; i < SQL_Reader.FieldCount; i++)
-                    {
-                        line += (SQL_Reader.GetValue(i).ToString()) + ":";
-                    }
-
-                    records.Add(line);
-                    line = null;
+                    //if (!(employees.Contains(SQL_Reader.GetValue(0).ToString()))) // Security measure if name was accidentally added twice into the database
+                        employees.Add(SQL_Reader.GetValue(0).ToString());
                 }
 
+                SQL_Reader.Close();
+
                 CloseConnection();
-                return records;
+
+                return employees;
             }
+            CloseConnection();
 
-            return records;
+            return employees;
         }
-
 
         public void InsertIntoTable(string kt, string nafn, string netfang, string simi)
         {
@@ -122,84 +120,5 @@ namespace SoyProject
             }
         }
 
-        public string FindMember(string ID)
-        {
-            string lina = null;
-
-            if (OpenConnection() == true)
-            {
-                query = "SELECT nafn, netfang, simanumer FROM medlimir where ID = '" + ID + "'";
-                SQL_Command = new MySqlCommand(query, SQL_Connection);
-                SQL_Reader = SQL_Command.ExecuteReader();
-
-                while (SQL_Reader.Read())
-                {
-                    for (int i = 0; i < SQL_Reader.FieldCount; i++)
-                    {
-                        lina += (SQL_Reader.GetValue(i).ToString()) + ":";
-                    }
-                }
-
-                SQL_Connection.Close();
-            }
-
-            return lina;
-
-        }
-
-        public void Erase(string ID)
-        {
-            if (OpenConnection())
-            {
-                query = "DELETE FROM medlimir where ID = '" + ID + "'";
-
-                SQL_Command = new MySqlCommand(query, SQL_Connection);
-                SQL_Command.ExecuteNonQuery();
-
-                CloseConnection();
-            }
-        }
-
-        public void Update(string kt, string nafn, string netfang, string simi)
-        {
-            if (OpenConnection())
-            {
-                query = "UPDATE medlimir SET ID = '" + kt + "', nafn = '" + nafn + "', netfang = '" + netfang + "', simanumer = '" + simi + "' where ID = '" + kt + "'";
-
-                SQL_Command = new MySqlCommand(query, SQL_Connection);
-                SQL_Command.ExecuteNonQuery();
-
-                CloseConnection();
-            }
-        }
-
-        public string[] FindSpecificAndReturn(string ID)
-        {
-            string[] data = new string[4];
-
-            if (OpenConnection())
-            {
-                query = "SELECT ID, nafn, netfang, simanumer FROM medlimir where ID = '" + ID + "'";
-
-                SQL_Command = new MySqlCommand(query, SQL_Connection);
-                SQL_Reader = SQL_Command.ExecuteReader();
-
-                while (SQL_Reader.Read())
-                {
-                    data[0] = SQL_Reader.GetValue(0).ToString();
-                    data[1] = SQL_Reader.GetValue(1).ToString();
-                    data[2] = SQL_Reader.GetValue(2).ToString();
-                    data[3] = SQL_Reader.GetValue(3).ToString();
-                }
-
-                SQL_Reader.Close();
-
-                CloseConnection();
-
-                return data;
-            }
-
-            return data;
-        }
     }
 }
