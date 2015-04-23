@@ -90,7 +90,7 @@
             // 
             this.Btn_ViewDB.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Btn_ViewDB.Font = new System.Drawing.Font("Microsoft JhengHei Light", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_ViewDB.Location = new System.Drawing.Point(0, 304);
+            this.Btn_ViewDB.Location = new System.Drawing.Point(0, 298);
             this.Btn_ViewDB.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_ViewDB.Name = "Btn_ViewDB";
             this.Btn_ViewDB.Size = new System.Drawing.Size(561, 67);
@@ -115,7 +115,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(561, 371);
+            this.ClientSize = new System.Drawing.Size(561, 365);
             this.Controls.Add(this.Btn_SendData);
             this.Controls.Add(this.Btn_ViewDB);
             this.Controls.Add(this.TxtBox_Quantity);
