@@ -107,12 +107,6 @@ namespace SoyProject
             return employees;
         }
 
-
-
-
-
-
-
         public string GetNameFromSSN(string SSN)
         {
             string name = null;
@@ -124,24 +118,26 @@ namespace SoyProject
                 SQL_Command = new MySqlCommand(query, SQL_Connection);
                 name = SQL_Command.ExecuteScalar().ToString();
 
+                CloseConnection();
                 return name;
             }
 
+            CloseConnection();
             return name;
         }
 
+        public void LogWork(string SSN, int bottleCount)
+        {
+            if (OpenConnection())
+            {
+                query = "INSERT INTO SoyBottles(employeeSSN, bottles, date) VALUES ('" + SSN + "'," + bottleCount + ", NOW());";
 
+                SQL_Command = new MySqlCommand(query, SQL_Connection);
+                SQL_Command.ExecuteNonQuery();
 
-
-
-
-
-
-
-
-
-
-
+                CloseConnection();
+            }
+        }
 
 
 
