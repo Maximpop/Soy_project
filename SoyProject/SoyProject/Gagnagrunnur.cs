@@ -78,14 +78,14 @@ namespace SoyProject
             }
         }
 
-        public List<string> RetrieveEmployeeNames()
+        public List<string> RetrieveEmployeeSSN()
         {
             // List of employees. Will later be filled with data from database.
             List<string> employees = new List<string>();
 
             if (OpenConnection())
             {
-                query = "SELECT name FROM employee";
+                query = "SELECT SSN FROM employee";
 
                 SQL_Command = new MySqlCommand(query, SQL_Connection);
                 SQL_Reader = SQL_Command.ExecuteReader();
@@ -106,6 +106,54 @@ namespace SoyProject
 
             return employees;
         }
+
+
+
+
+
+
+
+        public string GetNameFromSSN(string SSN)
+        {
+            string name = null;
+
+            if (OpenConnection())
+            {
+                query = "SELECT name FROM employee WHERE SSN = '" + SSN + "'";
+
+                SQL_Command = new MySqlCommand(query, SQL_Connection);
+                name = SQL_Command.ExecuteScalar().ToString();
+
+                return name;
+            }
+
+            return name;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         public void InsertIntoTable(string kt, string nafn, string netfang, string simi)
         {

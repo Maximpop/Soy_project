@@ -11,3 +11,6 @@
 C:\Users\Notandi\Desktop\FOR2B2U-Timaverkefni-7-8\FOR2B2U-Timaverkefni-7-8\bin\Debug\FOR2B2U-Timaverkefni-7-8.exe.config
 C:\Users\Notandi\Desktop\FOR2B2U-Timaverkefni-7-8\FOR2B2U-Timaverkefni-7-8\obj\Debug\FOR2B2U-Timaverkefni-7-8.exe
 C:\Users\Notandi\Desktop\FOR2B2U-Timaverkefni-7-8\FOR2B2U-Timaverkefni-7-8\obj\Debug\FOR2B2U-Timaverkefni-7-8.pdb
+C:\Users\Neal\Documents\GitHub\Soy_project\FOR2B2U-Timaverkefni-7-8\FOR2B2U-Timaverkefni-7-8\bin\Debug\FOR2B2U-Timaverkefni-7-8.exe.config
+C:\Users\Neal\Documents\GitHub\Soy_project\FOR2B2U-Timaverkefni-7-8\FOR2B2U-Timaverkefni-7-8\obj\Debug\FOR2B2U-Timaverkefni-7-8.exe
+C:\Users\Neal\Documents\GitHub\Soy_project\FOR2B2U-Timaverkefni-7-8\FOR2B2U-Timaverkefni-7-8\obj\Debug\FOR2B2U-Timaverkefni-7-8.pdb

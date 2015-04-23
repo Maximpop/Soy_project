@@ -23,16 +23,31 @@ namespace SoyProject
 
         private void SoyForm_Load(object sender, EventArgs e)
         {
-            List<string> employees = new List<string>();
+            #region employee fill
+            //List<string> employees = new List<string>();
+            List<string> employeeInfo = new List<string>();
 
-            employees = DB.RetrieveEmployeeNames();
+            employeeInfo = DB.RetrieveEmployeeSSN();
+            
+            //info = DB.RetrieveEmployeeNames();
 
-            foreach (string s in employees)
+            foreach (string s in employeeInfo)
             {
                 CB_Employees.Items.Add(s);
             }
+            #endregion
         }
 
+        string name = null;
+
+        private void CB_Employees_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string SSN = CB_Employees.SelectedItem.ToString();
+
+            name = DB.GetNameFromSSN(SSN);
+
+            Lbl_Name.Text = name;
+        }
         
     }
 }
