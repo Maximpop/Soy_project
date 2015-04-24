@@ -67,11 +67,7 @@ namespace SoyProject
                 int bottles = int.Parse(TxtBox_Quantity.Text);
 
                 if (bottles >= 4000)
-                {
                     PlayAlarm();
-                }
-
-                PlayAlarm();
                 
                 DB.LogWork(CB_Employees.Text, bottles);
 
