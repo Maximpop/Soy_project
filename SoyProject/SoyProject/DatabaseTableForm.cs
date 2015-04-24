@@ -26,7 +26,8 @@ namespace SoyProject
 
         private void DatabaseTableForm_Load(object sender, EventArgs e)
         {
-            //LV_DBTable.Items.Add();
+            LV_DBTable.Items.Add("ID", 200);
+            LV_DBTable.Items.Add("employeeSSN", 200);
         }
     }
 }
