@@ -22,6 +22,18 @@ namespace SoyProject
             DB.ConnectionToDatabase();
         }
 
+        // Exit Program if escape is pressed
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Escape)
+                this.Close();
+
+            bool res = base.ProcessCmdKey(ref msg, keyData);
+
+            return res;
+        }
+
+
         private void SoyForm_Load(object sender, EventArgs e)
         {
             #region employee fill
@@ -54,11 +66,18 @@ namespace SoyProject
             {
                 int bottles = int.Parse(TxtBox_Quantity.Text);
 
+                if (bottles >= 4000)
+                {
+                    PlayAlarm();
+                }
+
+                PlayAlarm();
+                
                 DB.LogWork(CB_Employees.Text, bottles);
 
                 MessageBox.Show("Vinnuferill hefur verið skráður í kerfið.", "Vinnuferill skráður", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
-            catch (Exception exc)
+            catch (Exception)
             {
                 MessageBox.Show("Villa! Veldu kennitölu og fjölda flaskna!", "Ónæg skilyrði", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

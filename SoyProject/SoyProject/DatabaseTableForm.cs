@@ -17,6 +17,13 @@ namespace SoyProject
             InitializeComponent();
         }
 
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Escape) this.Hide();
+            bool res = base.ProcessCmdKey(ref msg, keyData);
+            return res;
+        }
+
         private void DatabaseTableForm_Load(object sender, EventArgs e)
         {
             //LV_DBTable.Items.Add();
