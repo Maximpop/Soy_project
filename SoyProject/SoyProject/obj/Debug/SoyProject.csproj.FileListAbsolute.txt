@@ -18,3 +18,4 @@ C:\Users\Neal\Documents\GitHub\Soy_project\SoyProject\SoyProject\obj\Debug\SoyPr
 C:\Users\Neal\Documents\GitHub\Soy_project\SoyProject\SoyProject\obj\Debug\SoyProject.SoyForm.resources
 C:\Users\Neal\Documents\GitHub\Soy_project\SoyProject\SoyProject\obj\Debug\SoyProject.Properties.Resources.resources
 C:\Users\Neal\Documents\GitHub\Soy_project\SoyProject\SoyProject\obj\Debug\SoyProject.csproj.GenerateResource.Cache
+C:\Users\Neal\Documents\GitHub\Soy_project\SoyProject\SoyProject\obj\Debug\SoyProject.DatabaseTableForm.resources

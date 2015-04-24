@@ -13,6 +13,7 @@ namespace SoyProject
     public partial class SoyForm : Form
     {
         Gagnagrunnur DB = new Gagnagrunnur();
+        DatabaseTableForm DBTable = new DatabaseTableForm();
 
         public SoyForm()
         {
@@ -61,6 +62,19 @@ namespace SoyProject
             {
                 MessageBox.Show("Villa! Veldu kennitölu og fjölda flaskna!", "Ónæg skilyrði", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Btn_ViewDB_Click(object sender, EventArgs e)
+        {
+            DBTable.Show();
+        }
+
+        public void PlayAlarm()
+        {
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+
+            player.SoundLocation = "ALARM.wav";
+            player.Play();
         }
         
     }

@@ -97,6 +97,7 @@
             this.Btn_ViewDB.TabIndex = 23;
             this.Btn_ViewDB.Text = "Skoða gagnagrunn";
             this.Btn_ViewDB.UseVisualStyleBackColor = true;
+            this.Btn_ViewDB.Click += new System.EventHandler(this.Btn_ViewDB_Click);
             // 
             // Btn_SendData
             // 
