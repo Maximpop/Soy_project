@@ -23,8 +23,13 @@ namespace SoyProject
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
-            if (keyData == Keys.Escape) this.Hide();
+            if (keyData == Keys.Escape)
+                this.Hide();
+            else if (keyData == (Keys.Control | Keys.F))
+                MessageBox.Show("Ctrl + F");
+
             bool res = base.ProcessCmdKey(ref msg, keyData);
+
             return res;
         }
 
