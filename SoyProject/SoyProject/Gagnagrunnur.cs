@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace SoyProject
@@ -58,9 +59,10 @@ namespace SoyProject
                 SQL_Connection.Open();
                 return true;
             }
-            catch (Exception exc)
+            catch (Exception)
             {
-                throw exc;
+                MessageBox.Show("Tenging við miðlara mistókst. Tengstu við internetið.", "Tenging við miðlara mistókst", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
         }
 
@@ -138,30 +140,36 @@ namespace SoyProject
                 CloseConnection();
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-        public void InsertIntoTable(string kt, string nafn, string netfang, string simi)
+        
+        public List<string> ReadFromDatabase()
         {
+            List<string> records = new List<string>();
+            string line = null;
+
             if (OpenConnection())
             {
-                query = "INSERT INTO medlimir (ID, nafn, netfang, simanumer) VALUES ('" + kt + "','" + nafn + "','" + netfang + "','" + simi + "')";
-
+                query = "SELECT ID, employee.name, bottles, date FROM SoyBottles join employee on (employee.SSN = SoyBottles.employeeSSN);";
                 SQL_Command = new MySqlCommand(query, SQL_Connection);
-                SQL_Command.ExecuteNonQuery();
+
+                // ExecuteReader: Used to execute a command that will return 0 or more records.
+                SQL_Reader = SQL_Command.ExecuteReader();
+
+                while (SQL_Reader.Read())
+                {
+                    for (int i = 0; i < SQL_Reader.FieldCount; i++)
+                    {
+                        line += (SQL_Reader.GetValue(i).ToString()) + ";";
+                    }
+
+                    records.Add(line);
+                    line = null;
+                }
 
                 CloseConnection();
+                return records;
             }
+
+            return records;
         }
 
     }
