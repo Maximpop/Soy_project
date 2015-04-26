@@ -13,6 +13,7 @@ namespace SoyProject
     public partial class DatabaseTableForm : Form
     {
         Gagnagrunnur DB = new Gagnagrunnur();
+        FilterDatabaseView filter = new FilterDatabaseView();
 
         public DatabaseTableForm()
         {
@@ -24,9 +25,11 @@ namespace SoyProject
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             if (keyData == Keys.Escape)
-                this.Hide();
+                this.Close();
             else if (keyData == (Keys.Control | Keys.F))
                 MessageBox.Show("Ctrl + F");
+            else if (keyData == Keys.F2)
+                filter.Show(); this.Close();
 
             bool res = base.ProcessCmdKey(ref msg, keyData);
 
@@ -38,15 +41,10 @@ namespace SoyProject
         {
             LV_DBTable.Items.Clear();
 
-            // Listinn sem lesinn er úr gagnagrunninum
             List<string> linur = new List<string>();
-
-            // Fylki notað til að bæta við ListView
             string[] arr = new string[4];
-
-            // Heldur utan um hlutina sem eru bætt við í hverja línu á ListView
             ListViewItem itm;
-
+            
             try
             {
                 linur = DB.ReadFromDatabase();
@@ -56,21 +54,49 @@ namespace SoyProject
                     // Splitta línum frá gagnagrunninum
                     string[] lineFromDatabase = lina.Split(';');
 
-                    string ID = lineFromDatabase[0];
-                    string name = lineFromDatabase[1];
-                    string bottles = lineFromDatabase[2];
-                    string date = lineFromDatabase[3];
-
                     // Hefði líka verið hægt að gera þetta svona (arr[9] = lineFromDatabase[0])
-                    arr[0] = ID;
-                    arr[1] = name;
-                    arr[2] = bottles;
-                    arr[3] = date;
-
+                    arr[0] = lineFromDatabase[0];// ID
+                    arr[1] = lineFromDatabase[1];// Name
+                    arr[2] = lineFromDatabase[2];// Bottles
+                    arr[3] = lineFromDatabase[3];// Date
+                    
                     // Set inn í ListView hlutinn og bæti svo inn í ListView hólfin
                     itm = new ListViewItem(arr);
                     LV_DBTable.Items.Add(itm);
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("Villa: " + exc);
+            }
+        }
 
+        public void FilterDB(string kt = null, string date = null)
+        {
+            LV_DBTable.Items.Clear();
+            
+            List<string> linur = new List<string>();
+            string[] arr = new string[4];
+            ListViewItem itm;
+            
+            try
+            {
+                linur = DB.FilterDatabase(kt, date);
+
+                foreach (string lina in linur)
+                {
+                    // Splitta línum frá gagnagrunninum
+                    string[] lineFromDatabase = lina.Split(';');
+
+                    // Hefði líka verið hægt að gera þetta svona (arr[0] = lineFromDatabase[0])
+                    arr[0] = lineFromDatabase[0];// ID
+                    arr[1] = lineFromDatabase[1];// Name
+                    arr[2] = lineFromDatabase[2];// Bottles
+                    arr[3] = lineFromDatabase[3];// Date
+                    
+                    // Set inn í ListView hlutinn og bæti svo inn í ListView hólfin
+                    itm = new ListViewItem(arr);
+                    LV_DBTable.Items.Add(itm);
                 }
             }
             catch (Exception exc)

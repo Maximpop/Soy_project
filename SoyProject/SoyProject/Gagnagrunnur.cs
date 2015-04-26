@@ -112,18 +112,18 @@ namespace SoyProject
         public string GetNameFromSSN(string SSN)
         {
             string name = null;
-
+            
             if (OpenConnection())
             {
                 query = "SELECT name FROM employee WHERE SSN = '" + SSN + "'";
-
+                    
                 SQL_Command = new MySqlCommand(query, SQL_Connection);
                 name = SQL_Command.ExecuteScalar().ToString();
-
+                    
                 CloseConnection();
                 return name;
             }
-
+                
             CloseConnection();
             return name;
         }
@@ -149,6 +149,51 @@ namespace SoyProject
             if (OpenConnection())
             {
                 query = "SELECT ID, employee.name, bottles, date FROM SoyBottles join employee on (employee.SSN = SoyBottles.employeeSSN);";
+                SQL_Command = new MySqlCommand(query, SQL_Connection);
+
+                // ExecuteReader: Used to execute a command that will return 0 or more records.
+                SQL_Reader = SQL_Command.ExecuteReader();
+
+                while (SQL_Reader.Read())
+                {
+                    for (int i = 0; i < SQL_Reader.FieldCount; i++)
+                    {
+                        line += (SQL_Reader.GetValue(i).ToString()) + ";";
+                    }
+
+                    records.Add(line);
+                    line = null;
+                }
+
+                CloseConnection();
+                return records;
+            }
+
+            return records;
+        }
+
+        public List<string> FilterDatabase(string kt, string date)
+        {
+            List<string> records = new List<string>();
+            string line = null;
+
+            if (OpenConnection())
+            {
+                if (!String.IsNullOrEmpty(kt) && !String.IsNullOrEmpty(date))
+                    query = "SELECT ID, employee.name, bottles, date FROM SoyBottles join employee on (employee.SSN = SoyBottles.employeeSSN) WHERE employeeSSN = '" + kt + "' AND date LIKE '" + date + "%';";
+                else if (String.IsNullOrEmpty(kt) && String.IsNullOrEmpty(date))
+                    query = "SELECT ID, employee.name, bottles, date FROM SoyBottles join employee on (employee.SSN = SoyBottles.employeeSSN);";
+                else if (!String.IsNullOrEmpty(kt) && String.IsNullOrEmpty(date))
+                    query = "SELECT ID, employee.name, bottles, date FROM SoyBottles join employee on (employee.SSN = SoyBottles.employeeSSN) WHERE employeeSSN = '" + kt + "';";
+                else if (String.IsNullOrEmpty(kt) && !String.IsNullOrEmpty(date))
+                    query = "SELECT ID, employee.name, bottles, date FROM SoyBottles join employee on (employee.SSN = SoyBottles.employeeSSN) WHERE date LIKE '" + date + "%';";
+                else
+                    MessageBox.Show("Query Error");
+
+
+                //query = "SELECT ID, employee.name, bottles, date FROM SoyBottles join employee on (employee.SSN = SoyBottles.employeeSSN);";
+
+
                 SQL_Command = new MySqlCommand(query, SQL_Connection);
 
                 // ExecuteReader: Used to execute a command that will return 0 or more records.

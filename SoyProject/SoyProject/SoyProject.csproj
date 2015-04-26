@@ -54,6 +54,12 @@
     <Compile Include="DatabaseTableForm.Designer.cs">
       <DependentUpon>DatabaseTableForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FilterDatabaseView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterDatabaseView.Designer.cs">
+      <DependentUpon>FilterDatabaseView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,8 +69,12 @@
     <Compile Include="Gagnagrunnur.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UniversalMethods.cs" />
     <EmbeddedResource Include="DatabaseTableForm.resx">
       <DependentUpon>DatabaseTableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterDatabaseView.resx">
+      <DependentUpon>FilterDatabaseView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

@@ -81,6 +81,8 @@ namespace SoyProject
 
         private void Btn_ViewDB_Click(object sender, EventArgs e)
         {
+            DatabaseTableForm DBTable = new DatabaseTableForm();
+
             DBTable.Show();
         }
 
