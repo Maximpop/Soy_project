@@ -65,10 +65,10 @@ namespace SoyProject
             try
             {
                 int bottles = int.Parse(TxtBox_Quantity.Text);
-
+                /*
                 if (bottles >= 4000)
                     PlayAlarm();
-                
+                */
                 DB.LogWork(CB_Employees.Text, bottles);
 
                 MessageBox.Show("Vinnuferill hefur verið skráður í kerfið.", "Vinnuferill skráður", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
