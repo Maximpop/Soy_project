@@ -20,3 +20,12 @@ C:\Users\Neal\Documents\GitHub\Soy_project\SoyProject\SoyProject\obj\Debug\SoyPr
 C:\Users\Neal\Documents\GitHub\Soy_project\SoyProject\SoyProject\obj\Debug\SoyProject.DatabaseTableForm.resources
 C:\Users\Neal\Documents\GitHub\Soy_project\SoyProject\SoyProject\obj\Debug\SoyProject.csprojResolveAssemblyReference.cache
 C:\Users\Neal\Documents\GitHub\Soy_project\SoyProject\SoyProject\obj\Debug\SoyProject.FilterDatabaseView.resources
+C:\Users\Neal\Documents\GitHub\Soy_project\SoyProject\SoyProject\bin\Debug\Common.Logging.Core.dll
+C:\Users\Neal\Documents\GitHub\Soy_project\SoyProject\SoyProject\bin\Debug\Common.Logging.dll
+C:\Users\Neal\Documents\GitHub\Soy_project\SoyProject\SoyProject\bin\Debug\Quartz.dll
+C:\Users\Neal\Documents\GitHub\Soy_project\SoyProject\SoyProject\bin\Debug\Common.Logging.pdb
+C:\Users\Neal\Documents\GitHub\Soy_project\SoyProject\SoyProject\bin\Debug\Common.Logging.xml
+C:\Users\Neal\Documents\GitHub\Soy_project\SoyProject\SoyProject\bin\Debug\Common.Logging.Core.pdb
+C:\Users\Neal\Documents\GitHub\Soy_project\SoyProject\SoyProject\bin\Debug\Common.Logging.Core.xml
+C:\Users\Neal\Documents\GitHub\Soy_project\SoyProject\SoyProject\bin\Debug\Quartz.pdb
+C:\Users\Neal\Documents\GitHub\Soy_project\SoyProject\SoyProject\bin\Debug\Quartz.xml
