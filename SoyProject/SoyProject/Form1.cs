@@ -62,21 +62,37 @@ namespace SoyProject
 
         private void Btn_SendData_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                int bottles = int.Parse(TxtBox_Quantity.Text);
-                /*
-                if (bottles >= 4000)
-                    PlayAlarm();
-                */
-                DB.LogWork(CB_Employees.Text, bottles);
+            bool isDigit = true;
 
-                MessageBox.Show("Vinnuferill hefur verið skráður í kerfið.", "Vinnuferill skráður", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            }
-            catch (Exception)
+            foreach (char c in TxtBox_Quantity.Text)
             {
-                MessageBox.Show("Villa! Veldu kennitölu og fjölda flaskna!", "Ónæg skilyrði", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (Char.IsDigit(c))
+                    isDigit = true;
+                else
+                    isDigit = false;
+                break;
             }
+
+            if (isDigit)
+            {
+                try
+                {
+                    int bottles = int.Parse(TxtBox_Quantity.Text);
+                    /*
+                    if (bottles >= 4000)
+                        PlayAlarm();
+                    */
+                    DB.LogWork(CB_Employees.Text, bottles);
+                    
+                    MessageBox.Show("Vinnuferill hefur verið skráður í kerfið.", "Vinnuferill skráður", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Villa! Veldu kennitölu og fjölda flaskna!", "Ónæg skilyrði", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+                MessageBox.Show("Villa! Veldu kennitölu og fjölda flaskna!", "Ónæg skilyrði", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void Btn_ViewDB_Click(object sender, EventArgs e)
