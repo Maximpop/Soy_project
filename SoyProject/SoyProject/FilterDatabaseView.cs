@@ -47,17 +47,24 @@ namespace SoyProject
 
         private void Btn_FilterData_Click(object sender, EventArgs e)
         {
-            DatabaseTableForm dbtf = new DatabaseTableForm();
-
-            string sqlDate = DTP_Date.Value.ToString("yyyy/MM/dd").Replace('.', '-');
-
-            dbtf.Show();
-
-            if (ChBox_UseDate.Checked)
-                dbtf.FilterDB(SSN, sqlDate);
+            if (!String.IsNullOrEmpty(CB_Employees.Text))
+            {
+                DatabaseTableForm dbtf = new DatabaseTableForm();
+                
+                string sqlDate = DTP_Date.Value.ToString("yyyy/MM/dd").Replace('.', '-');
+                
+                dbtf.Show();
+                this.Hide();
+                
+                if (ChBox_UseDate.Checked)
+                    dbtf.FilterDB(SSN, sqlDate);
+                else
+                    dbtf.FilterDB(SSN);
+            }
             else
-                dbtf.FilterDB(SSN);
-
+            {
+                MessageBox.Show("Veldu starfsmann", "Veldu kennitölu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             
 
 

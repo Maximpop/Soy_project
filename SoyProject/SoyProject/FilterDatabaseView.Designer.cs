@@ -125,7 +125,7 @@
             this.Controls.Add(this.CB_Employees);
             this.Controls.Add(this.Lbl_Name);
             this.Name = "FilterDatabaseView";
-            this.Text = "FilterDatabaseView";
+            this.Text = "Sía";
             this.Load += new System.EventHandler(this.FilterDatabaseView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
