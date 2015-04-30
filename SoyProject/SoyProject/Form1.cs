@@ -97,9 +97,13 @@ namespace SoyProject
 
         private void Btn_ViewDB_Click(object sender, EventArgs e)
         {
-            DatabaseTableForm DBTable = new DatabaseTableForm();
+            /*DatabaseTableForm DBTable = new DatabaseTableForm();
 
-            DBTable.Show();
+            DBTable.Show();*/
+
+            FilterDatabaseView filterBox = new FilterDatabaseView();
+
+            filterBox.Show();
         }
 
         public void PlayAlarm()
